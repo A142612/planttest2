@@ -1,0 +1,27 @@
+<mvc:View controllerName="plant.test2.planttest2.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:table="sap.ui.table"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"  xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						
+						<smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="UniqueAndStablePersistencyKey" entitySet="Vc2hlHT001wSet"></smartFilterBar:SmartFilterBar>
+						<smartTable:SmartTable id="smartTable" entitySet="Vc2hlHT001wSet" smartFilterId="smartFilterBar" useExportToExcel="false"
+							beforeExport="onBeforeExport" useVariantManagement="false" useTablePersonalisation="false" header="Line Items" showRowCount="true"
+							persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="false" app:useSmartField="true" class="sapUiResponsiveContentPadding"
+							tableType="ResponsiveTable" >
+							<smartTable:layoutData>
+								<FlexItemData growFactor="1" baseSize="0%"/>
+							</smartTable:layoutData>
+							<table:Table selectionMode="Single" rowSelectionChange="handleValueHelpSelect"/>
+						</smartTable:SmartTable>
+
+						
+						
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
